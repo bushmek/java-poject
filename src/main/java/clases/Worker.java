@@ -1,7 +1,10 @@
 package clases;
 
 import java.io.Serializable;
-
+/**
+*
+* author @cluckin
+*/
 public class Worker implements Serializable {
 
 	private String login,pass,name,phoneNumber,filial,permission;
@@ -23,6 +26,7 @@ public class Worker implements Serializable {
 		this.permission=permission;
 	}
 	
+	//getter's
 	public String getLogin() {
 		return login;
 	}

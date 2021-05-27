@@ -20,6 +20,11 @@ import clases.Bicycle;
 
 //one thread
 
+/**
+*
+* author @cluckin
+*/
+
 public class OneThreadServer {
 
 	static String url="jdbc:mysql://127.0.0.1:3306/bycerent";
@@ -29,7 +34,7 @@ public class OneThreadServer {
 	private static ObjectOutputStream  out;
 	private static Connection conn;
 	
-	
+	//start server
 	public static void main(String[] args) {
 		ServerSocket serverSocket = null;
 		Socket socket = null;
@@ -85,7 +90,7 @@ public class OneThreadServer {
 	}
 
 	
-	static private Worker connect(String url,String login,String pass){
+	static public Worker connect(String url,String login,String pass){
 		conn = null;
 		Worker worker = new Worker();
 		try {
@@ -112,7 +117,7 @@ public class OneThreadServer {
 		return worker;
 	}
 	
-	public static ArrayList<Bicycle> select(String query) {
+	private static ArrayList<Bicycle> select(String query) {
 		 ArrayList<Bicycle> bicycles = new ArrayList<Bicycle>();
 		 try {
 		 if(conn!=null) {

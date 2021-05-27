@@ -2,6 +2,11 @@ package clases;
 
 import java.io.Serializable;
 
+/**
+*
+* author @cluckin
+*/
+
 public class Bicycle implements Serializable{
 
 	private String id,type,coordynates,filial,status;
@@ -17,6 +22,8 @@ public class Bicycle implements Serializable{
 		this.status=status;
 	}
 	
+	
+	//geter's
 	public String getID() {
 		return id;
 	}
@@ -38,6 +45,7 @@ public class Bicycle implements Serializable{
 		return status;
 	}
 	
+	//get convert value from id to type of bicycle
 	public String getConvertType() {
 		if (type.equals("1"))
 			return "Гірський";
